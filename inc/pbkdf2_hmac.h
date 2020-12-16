@@ -1,3 +1,5 @@
+// from Anti-weakpasswords transformed to modern C++ syntax
+// https://github.com/Anti-weakpasswords/PBKDF2-GCC-OpenSSL-library/blob/master/pbkdf2_openssl.c
 #include <iostream>
 #include <sstream>
 #include <cstring>

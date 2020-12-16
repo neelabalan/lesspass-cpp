@@ -29,7 +29,7 @@ static const std::unordered_map< SUBSET, std::string > CHARACTER_MAP = {
 void _add_arguments( argparse::ArgumentParser & );
 
 // get values required to generate salt
-std::unordered_map<std::string, std::string> create_salt_profile( argparse::ArgumentParser ); 
+std::unordered_map<std::string, std::string> create_salt_profile( argparse::ArgumentParser & ); 
 
 // get salt value from site, login and counter hex value 
 std::string _get_some_salt( std::unordered_map<std::string, std::string> ); 
@@ -38,7 +38,7 @@ std::string _get_some_salt( std::unordered_map<std::string, std::string> );
 BigInt calculate_entropy( std::string, std::string );
 
 // get rules like uppercase? lowercase? ...
-std::vector< SUBSET > _get_rules( argparse::ArgumentParser );
+std::vector< SUBSET > _get_rules( argparse::ArgumentParser & );
 
 // get characters based on the rules
 std::string _get_set_of_characters( std::vector< SUBSET > );
@@ -155,7 +155,7 @@ std::string _get_some_salt( std::unordered_map<std::string, std::string> profile
     return (profile[ "site" ] + profile[ "login" ] + util::int_to_hexstr( profile[ "counter" ] )); 
 }
 
-std::unordered_map<std::string, std::string> create_salt_profile( argparse::ArgumentParser args ) 
+std::unordered_map<std::string, std::string> create_salt_profile( argparse::ArgumentParser &args ) 
 {
     std::unordered_map<std::string, std::string> profile;
     profile.insert( { "site",       args.get<std::string>( "--site" )     });
@@ -164,7 +164,7 @@ std::unordered_map<std::string, std::string> create_salt_profile( argparse::Argu
     profile.insert( { "pass",       args.get<std::string>( "--pass" )     });
     return profile;
 }
-std::vector<SUBSET> _get_rules( argparse::ArgumentParser args ) 
+std::vector<SUBSET> _get_rules( argparse::ArgumentParser &args ) 
 {
     std::vector< SUBSET > rules;
     if ( args.get<bool>( "-l" ) ) { rules.push_back( SUBSET::lowercase ); }
