@@ -1,4 +1,6 @@
 # lesspass-cpp :key:
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/neelabalan/lesspass-cpp.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/neelabalan/lesspass-cpp/alerts/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/neelabalan/lesspass-cpp.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/neelabalan/lesspass-cpp/alerts/)
 
 This an **Unoffical client** of [lesspass cli](https://github.com/lesspass/lesspass/tree/master/cli) in C++
 
