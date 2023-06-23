@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: false
+IndentCaseLabels: false
+ColumnLimit: 88
+# AlignAfterOpenBracket: Align
+AlignAfterOpenBracket: BlockIndent
+AlignOperands: true
+AlignTrailingComments: true
+AllowAllParametersOfDeclarationOnNextLine: true
+
+# find . -type f \( -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.hpp" \) -exec clang-format -i {} \;
+
